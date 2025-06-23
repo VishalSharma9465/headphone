@@ -59,31 +59,7 @@
       background-color: #e60045;
     }
     .text-white{
-      background: url('/headphone/new.webp');
-    }
-    .product-card {
-      background: #f8f9fa;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      position: relative;
-    }
-    .badge-custom {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      padding: 5px 10px;
-      font-size: 12px;
-    }
-    .color-option {
-      width: 30px;
-      height: 30px;
-      border-radius: 6px;
-      margin: 5px;
-      cursor: pointer;
-      display: inline-block;
-      border: 2px solid #fff;
-      box-shadow: 0 0 2px rgba(0,0,0,0.1);
+      background: url('/headphone/new.webp')no-repeat center center/cove;
     }
     .fw-bolds{
       color: black;
@@ -93,6 +69,37 @@
     }
     .fw-bold{
       color: white;
+    }
+    .product-card {
+      border-radius: 16px;
+      padding: 20px;
+      background-color: #f8f9fa;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+    .badge-custom {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    .product-img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+    }
+    .color-options img {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    .color-options img.active {
+      border-color: #0d6efd;
     }
   </style>
 </head>
@@ -125,39 +132,55 @@
       <p class="lead mt-3">Feel the Bass. Live the Beat. Powered by HeadCore.</p>
     </div>
   </section>
-  <section>
-   <div class="container my-5">
-    <h2 class="text-center fw-bold mb-5">WHAT'S HOT</h2>
-    <div class="row g-4">
-      <div class="col-md-4>
-        <div class="product-card position-relative">
-          <span class="badge bg-success badge-custom">NEW</span>
-          <img src="/headphone/230_X_230_Smokin_Buds_True_Black_c443189027.png" alt="Smokin Buds" class="img-fluid mb-3" style="max-height:150px;">
-          <h5 class="fw-bolds">SMOKIN’ BUDS®</h5>
-          <p class="imagep">True Wireless Earbuds</p>
-          <p class="fw-bolds">₹7999</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="product-card">
-          <img src="/headphone/Crusher_ANC_2_Bone_S6_CAW_S951_Hero_v01_230_X_230_8810edb87a.png" alt="Crusher ANC 2" class="img-fluid mb-3" style="max-height:150px;">
-          <h5 class="fw-bolds">CRUSHER® ANC 2</h5>
-          <p class="imagep">Sensory Bass Headphones With Active Noise Canceling</p>
-          <p class="fw-bolds">₹64999</p>
-        </div>
-      </div
-      <div class="col-md-4">
-        <div class="product-card">
-          <span class="badge bg-primary badge-custom">BEST SELLER</span>
-          <img src="/headphone/Jib_Mic_1_Black_3_4_S2_DUYK_343_230_X_230_91193ac7ab.png" alt="Jib Earbuds" class="img-fluid mb-3" style="max-height:150px;">
-          <h5 class="fw-bolds">JIB EARBUDS WITH MICROPHONE</h5>
-          <p class="imagep">Effortless Sound.</p>
-          <p class="fw-bolds">₹1999</p>
+  <div class="col-md-4">
+      <div class="product-card position-relative text-center">
+        <span class="badge bg-success badge-custom">NEW</span>
+        <img src="https://via.placeholder.com/250x180?text=Smokin+Buds" class="product-img mb-3" alt="Smokin Buds" />
+        <h5 class="fw-bold">SMOKIN’ BUDS®</h5>
+        <p class="text-muted mb-1">True Wireless Earbuds</p>
+        <h6 class="fw-semibold">₹7999</h6>
+        <div class="color-options d-flex justify-content-center gap-2 mt-3">
+          <img src="https://via.placeholder.com/30/000000" class="active" />
+          <img src="https://via.placeholder.com/30/ff0000" />
+          <img src="https://via.placeholder.com/30/00ff00" />
+          <img src="https://via.placeholder.com/30/0000ff" />
         </div>
       </div>
     </div>
+    <div class="col-md-4">
+      <div class="product-card text-center">
+        <img src="https://via.placeholder.com/250x180?text=Crusher+ANC+2" class="product-img mb-3" alt="Crusher ANC 2" />
+        <h5 class="fw-bold">CRUSHER® ANC 2</h5>
+        <p class="text-muted mb-1">Sensory Bass Headphones With Active Noise Canceling</p>
+        <h6 class="fw-semibold">₹64999</h6>
+        <div class="color-options d-flex justify-content-center gap-2 mt-3">
+          <img src="https://via.placeholder.com/30/654321" />
+          <img src="https://via.placeholder.com/30/000000" class="active" />
+          <img src="https://via.placeholder.com/30/c0c0c0" />
+          <img src="https://via.placeholder.com/30/007bff" />
+          <img src="https://via.placeholder.com/30/ff0000" />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="product-card position-relative text-center">
+        <span class="badge bg-primary badge-custom">BEST SELLER</span>
+        <img src="https://via.placeholder.com/250x180?text=Jib+Earbuds" class="product-img mb-3" alt="Jib Earbuds" />
+        <h5 class="fw-bold">JIB EARBUDS WITH MICROPHONE</h5>
+        <p class="text-muted mb-1">Effortless Sound</p>
+        <h6 class="fw-semibold">₹1999</h6>
+        <div class="color-options d-flex justify-content-center gap-2 mt-3">
+          <img src="https://via.placeholder.com/30/4b0082" />
+          <img src="https://via.placeholder.com/30/00ff00" />
+          <img src="https://via.placeholder.com/30/ffffff" class="active" />
+          <img src="https://via.placeholder.com/30/ff69b4" />
+        </div>
+      </div>
+    </div>
+
   </div>
-</section>
+</div>
+
   
 
   
