@@ -126,6 +126,22 @@
   </style>
 </head>
 <body>
+  <?php
+$servername = "localhost";
+$username = "root";
+$password = "Vishal@123";
+$db = "sys";
+$conn = mysqli_connect($servername, $username, $password,$bd);
+
+  if(isset($_POST["send"])){
+  $fanme = $_POST["fname"];
+  $email = $_POST["email"];
+  $message = $_POST["message"];
+
+  $sqlir = "INSERT INTO headcore (n_name,e_email,message) VALUES ('$fname','$email','$message')";
+mysqli_quary($conn,$sqlir);
+  }
+  ?>
 
  
   <nav class="navbar navbar-expand-lg sticky-top">
@@ -261,18 +277,18 @@
     <div class="container">
       <h2 class="section-title">Let's Talk</h2>
       <p class="mb-4">Interested in becoming a partner or distributor? Contact us!</p>
-      <form class="row justify-content-center">
+      <form action="" method="POST" class="row justify-content-center">
         <div class="col-md-4 mb-2">
-          <input type="text" class="form-control" placeholder="Your Name" required>
+          <input type="text" class="form-control" placeholder="Your Name" name="fname" required>
         </div>
         <div class="col-md-4 mb-2">
-          <input type="email" class="form-control" placeholder="Your Email" required>
+          <input type="email" class="form-control" placeholder="Your Email" name="email" required>
         </div>
         <div class="col-md-8 mb-3">
-          <textarea class="form-control" rows="4" placeholder="Message..." required></textarea>
+          <textarea class="form-control" rows="4" placeholder="Message..." name="message" required></textarea>
         </div>
         <div class="col-8">
-          <button type="submit" class="btn btn-primary px-4">Send</button>
+          <button type="submit" class="btn btn-primary px-4 value="send" name="send">Send</button>
         </div>
       </form>
     </div>
